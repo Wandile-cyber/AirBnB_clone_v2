@@ -274,7 +274,7 @@ class HBNBCommand(cmd.Cmd):
             args = args[2]
             if args and args[0] is '\"':  # check for quoted arg
                 second_quote = args.find('\"', 1)
-                att_name = args[1:second_quote]
+                att_name = args[0:second_quote]
                 args = args[second_quote + 1:]
 
             args = args.partition(' ')
